@@ -45,7 +45,7 @@ docker exec -it standalone_fate bash
 cd /data/projects/fate/fateflow/bin
 sh service.sh status
 # if port is not listening
-sh service,sh start
+sh service.sh start
 ```
 
 ## Run pipeline example
