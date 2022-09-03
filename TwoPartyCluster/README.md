@@ -58,3 +58,9 @@ docker exec -it confs-10000_client_1 bash
 flow test toy --guest-party-id 10000 --host-party-id 9999
 ```
 
+## Install vim(optional)
+
+** if using proxy, pls unset it when you want to submit fate job **
+```bash
+apt-get update && apt-get install apt-file -y && apt-file update && apt-get install vim
+```
