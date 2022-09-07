@@ -5,7 +5,6 @@ import sys
 import os
 
 sourcepath="../data/"
-# sourcepath=""
 def generate(filename,size):
     sourcefile=os.path.join(sourcepath,filename)
     with open(sourcefile,'r') as rf:
@@ -22,7 +21,6 @@ def generate(filename,size):
                 item=content.split(",")
                 item[0]=str(i+1)+"0101"+item[0]
                 towrite.append(",".join(item))
-                # towrite.append(item[0])
             towrite="\n".join(towrite)
             wf.write(towrite)
             wf.write("\n")

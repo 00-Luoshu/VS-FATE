@@ -1,0 +1,192 @@
+{
+    "data": [
+        {
+            "f_apply_resource_time": 1662169951356,
+            "f_cancel_signal": false,
+            "f_cancel_time": null,
+            "f_cores": 4,
+            "f_create_date": "2022-09-02 01:52:30",
+            "f_create_time": 1662169950810,
+            "f_description": "",
+            "f_elapsed": 400385,
+            "f_end_date": "2022-09-02 01:59:11",
+            "f_end_scheduling_updates": 1,
+            "f_end_time": 1662170351839,
+            "f_engine_name": "EGGROLL",
+            "f_engine_type": "computing",
+            "f_inheritance_info": {},
+            "f_inheritance_status": "pass",
+            "f_initiator_party_id": "9999",
+            "f_initiator_role": "guest",
+            "f_is_initiator": true,
+            "f_job_id": "202209030152303922610",
+            "f_memory": 0,
+            "f_name": "",
+            "f_party_id": "9999",
+            "f_progress": 100,
+            "f_ready_signal": false,
+            "f_ready_time": null,
+            "f_remaining_cores": 4,
+            "f_remaining_memory": 0,
+            "f_rerun_signal": false,
+            "f_resource_in_use": false,
+            "f_return_resource_time": 1662170351849,
+            "f_role": "guest",
+            "f_roles": {
+                "guest": [
+                    9999
+                ],
+                "host": [
+                    10000
+                ]
+            },
+            "f_runtime_conf_on_party": {
+                "component_parameters": {
+                    "common": {
+                        "evaluation_0": {
+                            "eval_type": "binary"
+                        },
+                        "hetero_secure_boost_0": {
+                            "encrypt_param": {
+                                "method": "Paillier"
+                            },
+                            "num_trees": 3,
+                            "objective_param": {
+                                "objective": "cross_entropy"
+                            },
+                            "task_type": "classification",
+                            "tree_param": {
+                                "max_depth": 3
+                            },
+                            "validation_freqs": 1
+                        }
+                    },
+                    "role": {
+                        "guest": {
+                            "0": {
+                                "data_transform_0": {
+                                    "output_format": "dense",
+                                    "with_label": true
+                                },
+                                "data_transform_1": {
+                                    "output_format": "dense",
+                                    "with_label": true
+                                },
+                                "reader_0": {
+                                    "table": {
+                                        "name": "breast_hetero_guest",
+                                        "namespace": "experiment"
+                                    }
+                                },
+                                "reader_1": {
+                                    "table": {
+                                        "name": "breast_hetero_guest",
+                                        "namespace": "experiment"
+                                    }
+                                }
+                            }
+                        },
+                        "host": {
+                            "0": {
+                                "data_transform_0": {
+                                    "with_label": false
+                                },
+                                "data_transform_1": {
+                                    "with_label": false
+                                },
+                                "reader_0": {
+                                    "table": {
+                                        "name": "breast_hetero_host",
+                                        "namespace": "experiment"
+                                    }
+                                },
+                                "reader_1": {
+                                    "table": {
+                                        "name": "breast_hetero_host",
+                                        "namespace": "experiment"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "conf_path": "test_secureboost_train_binary_conf.json",
+                "dsl_path": "test_secureboost_train_dsl.json",
+                "dsl_version": 2,
+                "initiator": {
+                    "party_id": 9999,
+                    "role": "guest"
+                },
+                "job_parameters": {
+                    "adaptation_parameters": {
+                        "if_initiator_baseline": false,
+                        "request_task_cores": 4,
+                        "task_cores_per_node": 4,
+                        "task_memory_per_node": 0,
+                        "task_nodes": 1
+                    },
+                    "auto_retries": 0,
+                    "auto_retry_delay": 1,
+                    "computing_engine": "EGGROLL",
+                    "computing_partitions": 4,
+                    "eggroll_run": {
+                        "eggroll.session.processors.per.node": 4
+                    },
+                    "engines_address": {
+                        "computing": {
+                            "cores_per_node": 16,
+                            "nodes": 1
+                        },
+                        "federation": {
+                            "host": "rollsite",
+                            "port": 9370
+                        },
+                        "storage": {
+                            "cores_per_node": 16,
+                            "nodes": 1
+                        }
+                    },
+                    "federated_mode": "MULTIPLE",
+                    "federated_status_collect_type": "PUSH",
+                    "federation_engine": "EGGROLL",
+                    "inheritance_info": {},
+                    "job_type": "train",
+                    "model_id": "guest-9999#host-10000#model",
+                    "model_version": "202209030152303922610",
+                    "pulsar_run": {},
+                    "rabbitmq_run": {},
+                    "spark_run": {},
+                    "storage_engine": "EGGROLL",
+                    "task_parallelism": 1
+                },
+                "role": {
+                    "guest": [
+                        9999
+                    ],
+                    "host": [
+                        10000
+                    ]
+                }
+            },
+            "f_start_date": "2022-09-02 01:52:31",
+            "f_start_time": 1662169951454,
+            "f_status": "success",
+            "f_status_code": null,
+            "f_tag": "job_end",
+            "f_train_runtime_conf": {},
+            "f_update_date": "2022-09-02 01:59:12",
+            "f_update_time": 1662170352065,
+            "f_user": {
+                "guest": {
+                    "9999": ""
+                },
+                "host": {
+                    "10000": ""
+                }
+            },
+            "f_user_id": ""
+        }
+    ],
+    "retcode": 0,
+    "retmsg": "success"
+}
